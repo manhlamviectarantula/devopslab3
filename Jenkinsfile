@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = 'manh1310/devopslab3'
+        DOCKER_IMAGE = 'manh1310/devopslab3_1'
         DOCKER_TAG = 'latest'
         TELEGRAM_BOT_TOKEN = '7483832157:AAHicOYqicVKCu9JGm88rmNBjjUUFn5yKxc'
         TELEGRAM_CHAT_ID = '-1002308228547'
@@ -42,12 +42,12 @@ pipeline {
         stage('Deploy Golang to DEV') {
             steps {
                 echo 'Deploying to DEV...'
-                sh 'docker image pull manh1310/devopslab3:latest'
-                sh 'docker container stop devopslab3 || echo "this container does not exist"'
+                sh 'docker image pull manh1310/devopslab3_1:latest'
+                sh 'docker container stop devopslab3_1 || echo "this container does not exist"'
                 sh 'docker network create dev || echo "this network exists"'
                 sh 'echo y | docker container prune '
 
-                sh 'docker container run -d --rm --name lab3devops -p 3000:3000 --network dev manh1310/devopslab3:latest'
+                sh 'docker container run -d --rm --name lab3devops -p 3000:3000 --network dev manh1310/devopslab3_1:latest'
             }
         }
     }
