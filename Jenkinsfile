@@ -5,7 +5,7 @@ pipeline {
         DOCKER_IMAGE = 'manh1310/devopslab3'
         DOCKER_TAG = 'latest'
         TELEGRAM_BOT_TOKEN = '7483832157:AAHicOYqicVKCu9JGm88rmNBjjUUFn5yKxc'
-        TELEGRAM_CHAT_ID = '1002308228547'
+        TELEGRAM_CHAT_ID = '-1002308228547'
     }
 
     stages {
