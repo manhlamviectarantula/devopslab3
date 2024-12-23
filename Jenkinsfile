@@ -58,11 +58,11 @@ pipeline {
         }
 
         success {
-            sendTelegramMessage("✅ Build #${BUILD_NUMBER} was successful! ✅ 1")
+            sendTelegramMessage("✅ Build #${BUILD_NUMBER} was successful! ✅")
         }
 
         failure {
-            sendTelegramMessage("❌ Build #${BUILD_NUMBER} failed. ❌ 1")
+            sendTelegramMessage("❌ Build #${BUILD_NUMBER} failed. ❌")
         }
     }
 }
